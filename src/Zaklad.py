@@ -12,9 +12,9 @@ class Zaklad:
     pracownicy: Pracownik = []
 
     def wyswietl_pracownikow(self) -> None:
+        del Zaklad.pracownicy[:]
         with open("pracownicy.json", "r") as file:
             try:
-                del Zaklad.pracownicy[:]
                 dane = json.load(file)
                 for val in dane:
                     Zaklad.pracownicy.append(Pracownik(val['imie'], val['wiek'], val['zawod'], val['id']))
