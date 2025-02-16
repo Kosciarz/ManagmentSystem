@@ -1,0 +1,8 @@
+.idea/
+*.xml
+.vs/
+.vscode/
+build/
+out/
+__pycache__/
+*.iml
